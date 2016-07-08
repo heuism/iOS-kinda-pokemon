@@ -19,12 +19,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
     
+    @IBOutlet weak var restartBtn: UIButton!
+    
     let DIM_ALPHA: CGFloat = 0.2 //opaque 1 is full
     let OPAQUE: CGFloat = 1.0
     let MAX_PENALTIES: Int = 3
     var penalties:Int = 0
     var currentItem: UInt32 = 0
-    
+
     var musicPlayer: AVAudioPlayer!
     var sfxBite: AVAudioPlayer!
     var sfxHeart: AVAudioPlayer!
@@ -38,17 +40,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSound()
-        
-        reAllocateImage()
+        initData()
+    }
     
+    @IBAction func restartGame(_ sender: AnyObject) {
+        initData()
+    }
+    
+    func initData() {
+        musicPlayer.play()
+        
+        penalties = 0
+        currentItem = 0
+        
+        showRestartBtn(on: false)
+        showInteractItem(show: true)
+        
+        monsterImg.playStandingAnimation()
+        reAllocateImage()
+        
         penalty1Img.alpha = DIM_ALPHA
         penalty2Img.alpha = DIM_ALPHA
         penalty3Img.alpha = DIM_ALPHA
         
-    //    NotificationCenter.default().addObserver(self, selector: Selector("itemDroppedOnCharacter"), name: "onTargetDropped", object: nil)
+        //    NotificationCenter.default().addObserver(self, selector: Selector("itemDroppedOnCharacter"), name: "onTargetDropped", object: nil)
         NotificationCenter.default().addObserver(self, selector: #selector(itemDroppedOnCharacter), name: "onTargetDropped" as NSNotification.Name, object: nil)
-       //NotificationCenter.default().addObserver(self, selector: #selector(reAllocateImage), name: "changeRotation" as NSNotification.Name, object: nil)
-
+        
         startTimer()
     }
     
@@ -72,7 +89,6 @@ class ViewController: UIViewController {
             
             musicPlayer.numberOfLoops = -1
             musicPlayer.prepareToPlay()
-            musicPlayer.play()
             
             sfxBite.prepareToPlay()
             
@@ -84,6 +100,23 @@ class ViewController: UIViewController {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+    }
+    
+    func showInteractItem(show: Bool) {
+        
+        var alpha: CGFloat!
+        switch show {
+        case true:
+            alpha = OPAQUE
+        default:
+            alpha = DIM_ALPHA
+            
+        }
+        
+        heart4Monster.alpha = alpha
+        heart4Monster.isUserInteractionEnabled = show
+        food4Monster.alpha = alpha
+        food4Monster.isUserInteractionEnabled = show
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
@@ -100,10 +133,7 @@ class ViewController: UIViewController {
             sfxBite.play()
         }
 
-        heart4Monster.alpha = DIM_ALPHA
-        heart4Monster.isUserInteractionEnabled = false
-        food4Monster.alpha = DIM_ALPHA
-        food4Monster.isUserInteractionEnabled = false
+        showRestartBtn(on: false)
     }
     
     func startTimer() {
@@ -155,11 +185,29 @@ class ViewController: UIViewController {
         monsterHappy = false
     }
     
+    func callShowBtn(timer: Timer) {
+        
+        var setting = timer.userInfo as! Bool
+        showRestartBtn(on: setting)
+    }
+    
+    func showRestartBtn(on: Bool) {
+        print("HERE----HERE")
+        if on {
+            restartBtn.isHidden = false
+        }
+        else {
+            restartBtn.isHidden = true
+        }
+    }
+    
     func gameOver() {
+        //monsterImg.stopAnimating()
         sfxDeath.play()
         timer.invalidate()
         monsterImg.playDeadAnimation()
         musicPlayer.stop()
+        Timer.scheduledTimer(timeInterval: sfxDeath.duration, target: self, selector: #selector(callShowBtn), userInfo: true, repeats: false)
     }
 }
 

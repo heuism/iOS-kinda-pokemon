@@ -17,6 +17,7 @@
 		EB2EBFC01D2F5C75001903F9 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB2EBFBB1D2F5C75001903F9 /* death.wav */; };
 		EB2EBFC11D2F5C75001903F9 /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB2EBFBC1D2F5C75001903F9 /* heart.wav */; };
 		EB2EBFC21D2F5C75001903F9 /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EB2EBFBD1D2F5C75001903F9 /* cave-music.mp3 */; };
+		EBD53D8F1D2FA4AF0066D785 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBD53D8E1D2FA4AF0066D785 /* Minecraft.ttf */; };
 		EBD5CD901D2E3BC50082A7B4 /* DragImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD5CD8F1D2E3BC50082A7B4 /* DragImage.swift */; };
 		EBD5CD921D2E450C0082A7B4 /* MonsterImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD5CD911D2E450C0082A7B4 /* MonsterImg.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		EB2EBFBB1D2F5C75001903F9 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
 		EB2EBFBC1D2F5C75001903F9 /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
 		EB2EBFBD1D2F5C75001903F9 /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
+		EBD53D8E1D2FA4AF0066D785 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		EBD5CD8F1D2E3BC50082A7B4 /* DragImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImage.swift; sourceTree = "<group>"; };
 		EBD5CD911D2E450C0082A7B4 /* MonsterImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 		EB2C03AD1D2DFA2300A22C29 /* my-kinda-pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				EBD53D8E1D2FA4AF0066D785 /* Minecraft.ttf */,
 				EB2EBFB91D2F5C75001903F9 /* bite.wav */,
 				EB2EBFBA1D2F5C75001903F9 /* skull.wav */,
 				EB2EBFBB1D2F5C75001903F9 /* death.wav */,
@@ -149,6 +152,7 @@
 				EB2EBFBE1D2F5C75001903F9 /* bite.wav in Resources */,
 				EB2EBFC21D2F5C75001903F9 /* cave-music.mp3 in Resources */,
 				EB2EBFC01D2F5C75001903F9 /* death.wav in Resources */,
+				EBD53D8F1D2FA4AF0066D785 /* Minecraft.ttf in Resources */,
 				EB2EBFC11D2F5C75001903F9 /* heart.wav in Resources */,
 				EB2C03B91D2DFA2300A22C29 /* LaunchScreen.storyboard in Resources */,
 				EB2C03B61D2DFA2300A22C29 /* Assets.xcassets in Resources */,

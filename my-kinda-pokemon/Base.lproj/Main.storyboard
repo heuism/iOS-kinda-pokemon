@@ -7,6 +7,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Minecraft.ttf">
+            <string>Minecraft</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -54,7 +59,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F9C72B28-4332-45FE-8084-8BC8C95203A3" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-ky-RTJ" customClass="MonsterImg" customModule="my_kinda_pokemon" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7AB3C7A2-618C-40D8-8CD1-34EDF6701DAC" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-ky-RTJ" customClass="MonsterImg" customModule="my_kinda_pokemon" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="503" id="1yb-7O-PcV"/>
                                     <constraint firstAttribute="width" constant="495" id="PY4-YD-BfK"/>
@@ -85,6 +90,20 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9v-qF-EKD">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="afG-Pv-8Ew"/>
+                                    <constraint firstAttribute="height" constant="61" id="vBR-hP-pWP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="22"/>
+                                <state key="normal" title="Restart" backgroundImage="resetbutton">
+                                    <color key="titleColor" red="0.94471230340000001" green="1" blue="0.99626669560000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWS-5s-iO8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -92,6 +111,7 @@
                             <constraint firstItem="dQA-a7-Drx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2YM-zg-9Fd"/>
                             <constraint firstItem="dQA-a7-Drx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4by-8Q-mk0"/>
                             <constraint firstItem="dQA-a7-Drx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Ru-pd-P0D"/>
+                            <constraint firstItem="Z9v-qF-EKD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7CI-N9-WyH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NwK-aW-AEY" secondAttribute="bottom" id="8Sg-5K-2qo"/>
                             <constraint firstItem="x4C-ky-RTJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.3" id="8aO-Hp-qPt"/>
                             <constraint firstItem="dQA-a7-Drx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="G0e-VX-DnF"/>
@@ -108,6 +128,7 @@
                             <constraint firstItem="rg1-ep-TZl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hbb-Td-ATA"/>
                             <constraint firstAttribute="bottom" secondItem="x4C-ky-RTJ" secondAttribute="bottom" constant="-25" id="iFl-YC-fIf"/>
                             <constraint firstItem="dQA-a7-Drx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iWP-dQ-CwM"/>
+                            <constraint firstItem="Z9v-qF-EKD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jxY-4V-VCn"/>
                             <constraint firstItem="x4C-ky-RTJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.73" id="mpp-Xt-3fp"/>
                             <constraint firstItem="dQA-a7-Drx" firstAttribute="top" secondItem="U3g-HS-dUu" secondAttribute="bottom" constant="8" id="qFJ-hV-Whr"/>
                         </constraints>
@@ -163,6 +184,7 @@
                         <outlet property="penalty1Img" destination="lNG-cN-1wt" id="WNa-qf-dfw"/>
                         <outlet property="penalty2Img" destination="UwP-e0-rwL" id="20g-1d-V4Q"/>
                         <outlet property="penalty3Img" destination="FKP-ea-MT4" id="SUn-T6-E1Y"/>
+                        <outlet property="restartBtn" destination="Z9v-qF-EKD" id="jp9-fx-XQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -171,7 +193,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="F9C72B28-4332-45FE-8084-8BC8C95203A3" width="889" height="615">
+        <image name="7AB3C7A2-618C-40D8-8CD1-34EDF6701DAC" width="889" height="615">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -36681,6 +36703,7 @@ AAAAAAAAAAAAAAAAACFpnA
         <image name="ground" width="1444" height="151"/>
         <image name="heart" width="95" height="98"/>
         <image name="livespanel" width="468" height="137"/>
+        <image name="resetbutton" width="212" height="78"/>
         <image name="skull" width="95" height="98"/>
     </resources>
 </document>
