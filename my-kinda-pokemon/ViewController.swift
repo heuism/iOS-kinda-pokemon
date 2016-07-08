@@ -112,7 +112,7 @@ class ViewController: UIViewController {
             alpha = DIM_ALPHA
             
         }
-        
+        print("show --- \(show)")
         heart4Monster.alpha = alpha
         heart4Monster.isUserInteractionEnabled = show
         food4Monster.alpha = alpha
@@ -122,6 +122,7 @@ class ViewController: UIViewController {
     func itemDroppedOnCharacter(notif: AnyObject) {
         print("Item dropped on character")
         
+        showInteractItem(show: false)
         monsterHappy = true
         
         startTimer()
@@ -133,7 +134,7 @@ class ViewController: UIViewController {
             sfxBite.play()
         }
 
-        showRestartBtn(on: false)
+        //showRestartBtn(on: false)
     }
     
     func startTimer() {
@@ -163,6 +164,7 @@ class ViewController: UIViewController {
             }
             
             if penalties >= MAX_PENALTIES {
+                
                 gameOver()
             }
         }
@@ -195,6 +197,7 @@ class ViewController: UIViewController {
         print("HERE----HERE")
         if on {
             restartBtn.isHidden = false
+            showInteractItem(show: false)
         }
         else {
             restartBtn.isHidden = true

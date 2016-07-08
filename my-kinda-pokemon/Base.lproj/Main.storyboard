@@ -59,7 +59,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="38677481-7F25-4159-AEB0-4D399269167C" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-ky-RTJ" customClass="MonsterImg" customModule="my_kinda_pokemon" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10C968BC-6F1F-4C53-B21E-DC2D43A58023" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-ky-RTJ" customClass="MonsterImg" customModule="my_kinda_pokemon" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="503" id="1yb-7O-PcV"/>
                                     <constraint firstAttribute="width" constant="495" id="PY4-YD-BfK"/>
@@ -193,7 +193,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="38677481-7F25-4159-AEB0-4D399269167C" width="889" height="615">
+        <image name="10C968BC-6F1F-4C53-B21E-DC2D43A58023" width="889" height="615">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
