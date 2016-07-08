@@ -159,6 +159,7 @@ class ViewController: UIViewController {
         sfxDeath.play()
         timer.invalidate()
         monsterImg.playDeadAnimation()
+        musicPlayer.stop()
     }
 }
 
