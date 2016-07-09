@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monsterImg: MonsterImg!
     @IBOutlet weak var heart4Monster: DragImage!
     @IBOutlet weak var food4Monster: DragImage!
+    @IBOutlet weak var clock4Monster: DragImage!
     
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
@@ -73,6 +74,7 @@ class ViewController: UIViewController {
         //print("Here------------")
         food4Monster.dropTarget = monsterImg
         heart4Monster.dropTarget = monsterImg
+        clock4Monster.dropTarget = monsterImg
     }
     
     func loadSound(){
@@ -117,6 +119,8 @@ class ViewController: UIViewController {
         heart4Monster.isUserInteractionEnabled = show
         food4Monster.alpha = alpha
         food4Monster.isUserInteractionEnabled = show
+        clock4Monster.alpha = alpha
+        clock4Monster.isUserInteractionEnabled = show
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
@@ -128,10 +132,10 @@ class ViewController: UIViewController {
         startTimer()
         
         switch currentItem {
-        case 0:
-            sfxHeart.play()
-        default:
+        case 1:
             sfxBite.play()
+        default:
+            sfxHeart.play()
         }
 
         //showRestartBtn(on: false)
@@ -168,20 +172,35 @@ class ViewController: UIViewController {
                 gameOver()
             }
         }
-        let rand = arc4random_uniform(2) // 0 or 1
+        let rand = arc4random_uniform(3) // 0 or 1
         switch rand {
+        case 0:
+            food4Monster.alpha = DIM_ALPHA
+            food4Monster.isUserInteractionEnabled = false
+            
+            heart4Monster.isUserInteractionEnabled = true
+            heart4Monster.alpha = OPAQUE
+            
+            clock4Monster.isUserInteractionEnabled = false
+            clock4Monster.alpha = DIM_ALPHA
         case 1:
             food4Monster.alpha = OPAQUE
             food4Monster.isUserInteractionEnabled = true
             
             heart4Monster.isUserInteractionEnabled = false
             heart4Monster.alpha = DIM_ALPHA
+            
+            clock4Monster.isUserInteractionEnabled = false
+            clock4Monster.alpha = DIM_ALPHA
         default:
             food4Monster.alpha = DIM_ALPHA
             food4Monster.isUserInteractionEnabled = false
             
-            heart4Monster.isUserInteractionEnabled = true
-            heart4Monster.alpha = OPAQUE
+            heart4Monster.isUserInteractionEnabled = false
+            heart4Monster.alpha = DIM_ALPHA
+            
+            clock4Monster.isUserInteractionEnabled = true
+            clock4Monster.alpha = OPAQUE
         }
         currentItem = rand
         monsterHappy = false

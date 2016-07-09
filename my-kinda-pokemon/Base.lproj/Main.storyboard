@@ -37,6 +37,15 @@
                                     <constraint firstAttribute="height" constant="62" id="l0g-Ee-mDr"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EC3E8353-BB4E-4062-89B3-032580FCE484" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-ky-RTJ" customClass="MonsterImg" customModule="my_kinda_pokemon" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="503" id="1yb-7O-PcV"/>
+                                    <constraint firstAttribute="width" constant="495" id="PY4-YD-BfK"/>
+                                </constraints>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="231" y="-64" width="495" height="503"/>
+                                </variation>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PYV-NA-6nl">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="lNG-cN-1wt">
@@ -59,19 +68,26 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10C968BC-6F1F-4C53-B21E-DC2D43A58023" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-ky-RTJ" customClass="MonsterImg" customModule="my_kinda_pokemon" customModuleProvider="target">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="503" id="1yb-7O-PcV"/>
-                                    <constraint firstAttribute="width" constant="495" id="PY4-YD-BfK"/>
-                                </constraints>
-                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="231" y="-64" width="495" height="503"/>
-                                </variation>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-a7-Drx" userLabel="Stack View Food">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-a7-Drx" userLabel="Stack View Food">
                                 <subviews>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="DhW-IF-zGg" customClass="DragImage" customModule="my_kinda_pokemon" customModuleProvider="target"/>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-zh-Pff" customClass="DragImage" customModule="my_kinda_pokemon" customModuleProvider="target"/>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="DhW-IF-zGg" customClass="DragImage" customModule="my_kinda_pokemon" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="HHv-ff-TwZ"/>
+                                            <constraint firstAttribute="width" constant="95" id="bJg-YY-BhX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-zh-Pff" customClass="DragImage" customModule="my_kinda_pokemon" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="DIr-st-tZZ"/>
+                                            <constraint firstAttribute="width" constant="95" id="TCF-T6-6WV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="4hL-9R-XG0" customClass="DragImage" customModule="my_kinda_pokemon" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="aif-bt-Gdq"/>
+                                            <constraint firstAttribute="width" constant="95" id="qUX-o5-yRv"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="246" id="2Lb-re-Ist"/>
@@ -83,7 +99,7 @@
                                         <exclude reference="73D-yo-kDY"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact" axis="vertical" spacing="50">
+                                <variation key="heightClass=compact" axis="vertical" spacing="15">
                                     <mask key="constraints">
                                         <include reference="2Lb-re-Ist"/>
                                         <include reference="73D-yo-kDY"/>
@@ -178,6 +194,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="clock4Monster" destination="4hL-9R-XG0" id="sCB-YX-PIx"/>
                         <outlet property="food4Monster" destination="b2p-zh-Pff" id="KGh-ne-hHe"/>
                         <outlet property="heart4Monster" destination="DhW-IF-zGg" id="lyz-ch-tkO"/>
                         <outlet property="monsterImg" destination="x4C-ky-RTJ" id="4sl-Kh-dGd"/>
@@ -193,7 +210,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="10C968BC-6F1F-4C53-B21E-DC2D43A58023" width="889" height="615">
+        <image name="EC3E8353-BB4E-4062-89B3-032580FCE484" width="889" height="615">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -36699,6 +36716,7 @@ AAAAAAAAAAAAAAAAACFpnA
 </mutableData>
         </image>
         <image name="bg" width="768" height="1024"/>
+        <image name="clock" width="1079" height="1079"/>
         <image name="food" width="95" height="98"/>
         <image name="ground" width="1444" height="151"/>
         <image name="heart" width="95" height="98"/>
