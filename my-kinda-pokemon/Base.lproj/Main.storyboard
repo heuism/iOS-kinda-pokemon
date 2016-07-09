@@ -37,7 +37,7 @@
                                     <constraint firstAttribute="height" constant="62" id="l0g-Ee-mDr"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EC3E8353-BB4E-4062-89B3-032580FCE484" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-ky-RTJ" customClass="MonsterImg" customModule="my_kinda_pokemon" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B63C162B-DD72-4BD5-BC1F-F5F2404DF24B" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-ky-RTJ" customClass="MonsterImg" customModule="my_kinda_pokemon" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="503" id="1yb-7O-PcV"/>
                                     <constraint firstAttribute="width" constant="495" id="PY4-YD-BfK"/>
@@ -68,7 +68,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-a7-Drx" userLabel="Stack View Food">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-a7-Drx" userLabel="Stack View Food">
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="DhW-IF-zGg" customClass="DragImage" customModule="my_kinda_pokemon" customModuleProvider="target">
                                         <constraints>
@@ -99,7 +99,7 @@
                                         <exclude reference="73D-yo-kDY"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact" axis="vertical" spacing="15">
+                                <variation key="heightClass=compact" axis="vertical" spacing="10">
                                     <mask key="constraints">
                                         <include reference="2Lb-re-Ist"/>
                                         <include reference="73D-yo-kDY"/>
@@ -210,7 +210,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="EC3E8353-BB4E-4062-89B3-032580FCE484" width="889" height="615">
+        <image name="B63C162B-DD72-4BD5-BC1F-F5F2404DF24B" width="889" height="615">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
