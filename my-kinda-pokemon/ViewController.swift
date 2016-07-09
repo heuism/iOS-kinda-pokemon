@@ -11,6 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var selectMonster1: UIButton!
+    @IBOutlet weak var selectMonster2: UIButton!
+    
     @IBOutlet weak var monsterImg: Enemy1!
     @IBOutlet weak var monster2Img: Enemy2!
     @IBOutlet weak var heart4Monster: DragImage!
@@ -43,11 +46,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSound()
+        showElection(show: true)
+        //initData()
+    }
+    
+    @IBAction func selectMonster(sender: AnyObject){
+        switch sender.tag {
+        case 1:
+            monster1Select = true
+        case 2:
+            monster1Select = false
+        default:
+            print("nothing")
+        }
+        showElection(show: false)
         initData()
     }
     
     @IBAction func restartGame(_ sender: AnyObject) {
         initData()
+    }
+    
+    func showElection(show: Bool) {
+        selectMonster1.isHidden = !show
+        selectMonster2.isHidden = !show
+        
+        food4Monster.isHidden = show
+        heart4Monster.isHidden = show
+        clock4Monster.isHidden = show
+        monsterImg.isHidden = show
+        monster2Img.isHidden = show
+        showRestartBtn(on: !show)
     }
     
     func initData() {
