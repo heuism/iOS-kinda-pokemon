@@ -11,7 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var monsterImg: MonsterImg!
+    @IBOutlet weak var monsterImg: Enemy1!
+    @IBOutlet weak var monster2Img: Enemy2!
     @IBOutlet weak var heart4Monster: DragImage!
     @IBOutlet weak var food4Monster: DragImage!
     @IBOutlet weak var clock4Monster: DragImage!
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     let MAX_PENALTIES: Int = 3
     var penalties:Int = 0
     var currentItem: UInt32 = 0
+    var monster1Select:Bool = false;
 
     var musicPlayer: AVAudioPlayer!
     var sfxBite: AVAudioPlayer!
@@ -51,13 +53,22 @@ class ViewController: UIViewController {
     func initData() {
         musicPlayer.play()
         
+        monsterImg.isHidden = !monster1Select
+        
+        monster2Img.isHidden = monster1Select
+        
         penalties = 0
         currentItem = 0
         
         showRestartBtn(on: false)
         showInteractItem(show: true)
         
-        monsterImg.playStandingAnimation()
+        switch monster1Select {
+        case true:
+            monsterImg.playStandingAnimation()
+        default:
+            monster2Img.playStandingAnimation()
+        }
         reAllocateImage()
         
         penalty1Img.alpha = DIM_ALPHA
@@ -72,9 +83,16 @@ class ViewController: UIViewController {
     
     func reAllocateImage() {
         //print("Here------------")
-        food4Monster.dropTarget = monsterImg
-        heart4Monster.dropTarget = monsterImg
-        clock4Monster.dropTarget = monsterImg
+        switch monster1Select {
+        case true:
+            food4Monster.dropTarget = monsterImg
+            heart4Monster.dropTarget = monsterImg
+            clock4Monster.dropTarget = monsterImg
+        default:
+            food4Monster.dropTarget = monster2Img
+            heart4Monster.dropTarget = monster2Img
+            clock4Monster.dropTarget = monster2Img
+        }
     }
     
     func loadSound(){
@@ -227,7 +245,12 @@ class ViewController: UIViewController {
         //monsterImg.stopAnimating()
         sfxDeath.play()
         timer.invalidate()
-        monsterImg.playDeadAnimation()
+        switch monster1Select {
+        case true:
+            monsterImg.playDeadAnimation()
+        default:
+            monster2Img.playDeadAnimation()
+        }
         musicPlayer.stop()
         Timer.scheduledTimer(timeInterval: sfxDeath.duration, target: self, selector: #selector(callShowBtn), userInfo: true, repeats: false)
     }

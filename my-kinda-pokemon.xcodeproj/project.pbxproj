@@ -20,6 +20,8 @@
 		EBD53D8F1D2FA4AF0066D785 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBD53D8E1D2FA4AF0066D785 /* Minecraft.ttf */; };
 		EBD5CD901D2E3BC50082A7B4 /* DragImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD5CD8F1D2E3BC50082A7B4 /* DragImage.swift */; };
 		EBD5CD921D2E450C0082A7B4 /* MonsterImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD5CD911D2E450C0082A7B4 /* MonsterImg.swift */; };
+		EBEB24CB1D311F570025516F /* Enemy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEB24CA1D311F570025516F /* Enemy1.swift */; };
+		EBEB24CD1D311FDD0025516F /* Enemy2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEB24CC1D311FDD0025516F /* Enemy2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		EBD53D8E1D2FA4AF0066D785 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		EBD5CD8F1D2E3BC50082A7B4 /* DragImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImage.swift; sourceTree = "<group>"; };
 		EBD5CD911D2E450C0082A7B4 /* MonsterImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImg.swift; sourceTree = "<group>"; };
+		EBEB24CA1D311F570025516F /* Enemy1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy1.swift; sourceTree = "<group>"; };
+		EBEB24CC1D311FDD0025516F /* Enemy2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				EB2C03BA1D2DFA2300A22C29 /* Info.plist */,
 				EBD5CD8F1D2E3BC50082A7B4 /* DragImage.swift */,
 				EBD5CD911D2E450C0082A7B4 /* MonsterImg.swift */,
+				EBEB24CA1D311F570025516F /* Enemy1.swift */,
+				EBEB24CC1D311FDD0025516F /* Enemy2.swift */,
 			);
 			path = "my-kinda-pokemon";
 			sourceTree = "<group>";
@@ -169,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBD5CD921D2E450C0082A7B4 /* MonsterImg.swift in Sources */,
+				EBEB24CD1D311FDD0025516F /* Enemy2.swift in Sources */,
 				EB2C03B11D2DFA2300A22C29 /* ViewController.swift in Sources */,
+				EBEB24CB1D311F570025516F /* Enemy1.swift in Sources */,
 				EBD5CD901D2E3BC50082A7B4 /* DragImage.swift in Sources */,
 				EB2C03AF1D2DFA2300A22C29 /* AppDelegate.swift in Sources */,
 			);
